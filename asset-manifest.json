@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/i-consigli-della-nonna/static/css/main.932ee9e1.css",
+    "main.js": "/i-consigli-della-nonna/static/js/main.ad1c65f3.js",
+    "index.html": "/i-consigli-della-nonna/index.html",
+    "main.932ee9e1.css.map": "/i-consigli-della-nonna/static/css/main.932ee9e1.css.map",
+    "main.ad1c65f3.js.map": "/i-consigli-della-nonna/static/js/main.ad1c65f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.932ee9e1.css",
+    "static/js/main.ad1c65f3.js"
+  ]
+}
