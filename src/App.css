@@ -16,6 +16,8 @@ body {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 h1 {
@@ -44,6 +46,7 @@ button:hover {
   margin-top: 20px;
   font-size: 1.8em;
   animation: fadeIn 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
