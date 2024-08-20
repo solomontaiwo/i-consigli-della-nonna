@@ -1,11 +1,11 @@
 body {
-  margin: 0; /* Rimuovi il margine */
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6DD5FA, #2980B9);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
   color: white;
   height: 100vh; /* Assicurati che il body occupi tutta l'altezza della finestra */
 }
@@ -58,8 +58,12 @@ button:hover {
 .phrase {
   margin-top: 20px;
   font-size: 1em;
-  animation: fadeIn 0.5s ease-in-out;
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+.phrase.show {
+  opacity: 1;
 }
 
 @keyframes fadeIn {

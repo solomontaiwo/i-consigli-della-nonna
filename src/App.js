@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -97,21 +97,34 @@ function App() {
 
   const [currentPhrase, setCurrentPhrase] = useState("");
   const [showNextButton, setShowNextButton] = useState(false);
+  const [isPhraseVisible, setIsPhraseVisible] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {
-    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-    setCurrentPhrase(randomPhrase);
-    setShowNextButton(true);
+    setIsAnimating(true);
+    setIsPhraseVisible(false); // Nascondi la frase attuale
+    // Dopo la transizione, imposta la nuova frase
+    setTimeout(() => {
+      const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+      setCurrentPhrase(randomPhrase);
+      setShowNextButton(true);
+    }, 300); // Tempo della transizione di dissolvenza
   };
 
-  const handleNextPhrase = () => {
-    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-    setCurrentPhrase(randomPhrase);
-  };
+  useEffect(() => {
+    if (showNextButton) {
+      // Dopo un breve ritardo, mostra la nuova frase
+      const timer = setTimeout(() => {
+        setIsPhraseVisible(true);
+        setIsAnimating(false);
+      }, 50); // Ritardo breve per la transizione di dissolvenza
+      return () => clearTimeout(timer);
+    }
+  }, [currentPhrase, showNextButton]);
 
   return (
     <div className="container-wrapper">
-      <div className="container">
+      <div className={`container ${isAnimating ? "animating" : ""}`}>
         <h1>I consigli della nonna alcolizzata</h1>
         <h4>
           Made with love by{" "}
@@ -128,8 +141,10 @@ function App() {
         )}
         {showNextButton && (
           <>
-            <p className="phrase">{currentPhrase}</p>
-            <button onClick={handleNextPhrase}>Altro gioco</button>
+            <p className={`phrase ${isPhraseVisible ? "show" : "hide"}`}>
+              {currentPhrase}
+            </p>
+            <button onClick={handleClick}>Altro consiglio</button>
           </>
         )}
       </div>
