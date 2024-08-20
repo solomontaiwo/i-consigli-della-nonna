@@ -112,7 +112,7 @@ function App() {
   return (
     <div className="container-wrapper">
       <div className="container">
-        <h1>I Consigli della Nonna alcolizzata</h1>
+        <h1>I consigli della nonna alcolizzata</h1>
         <h3>
           Made with love by{" "}
           <a

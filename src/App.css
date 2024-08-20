@@ -1,4 +1,5 @@
 body {
+  margin: 0; /* Rimuovi il margine */
   padding: 0;
   display: flex;
   justify-content: center;
@@ -6,6 +7,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #6DD5FA, #2980B9);
   color: white;
+  height: 100vh; /* Assicurati che il body occupi tutta l'altezza della finestra */
 }
 
 .container-wrapper {
@@ -50,7 +52,7 @@ button:hover {
 
 .phrase {
   margin-top: 20px;
-  font-size: 1.8em;
+  font-size: 1em;
   animation: fadeIn 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
