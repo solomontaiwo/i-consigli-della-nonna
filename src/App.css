@@ -1,13 +1,19 @@
 body {
-  margin: 0;
+  margin: 10%;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #6DD5FA, #2980B9);
   color: white;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
@@ -15,6 +21,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   border-radius: 15px;
+  width: 80%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
   overflow: hidden;
@@ -39,7 +46,7 @@ button {
 
 button:hover {
   background-color: #e67e22;
-  transform: scale(1.05);
+  transform: scale(1.25);
 }
 
 .phrase {
