@@ -127,7 +127,7 @@ function App() {
       <div className={`container ${isAnimating ? "animating" : ""}`}>
         <h1>I consigli della nonna alcolizzata</h1>
         <h4>
-          Made with love by{" "}
+          Made with (some) love by{" "}
           <a
             href="https://www.instagram.com/solomon.taiwo/"
             target="_blank"
