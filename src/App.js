@@ -113,7 +113,7 @@ function App() {
     <div className="container-wrapper">
       <div className="container">
         <h1>I consigli della nonna alcolizzata</h1>
-        <h3>
+        <h4>
           Made with love by{" "}
           <a
             href="https://www.instagram.com/solomon.taiwo/"
@@ -122,7 +122,7 @@ function App() {
           >
             Solomon
           </a>
-        </h3>
+        </h4>
         {!showNextButton && (
           <button onClick={handleClick}>Fatti consigliare</button>
         )}
