@@ -110,27 +110,29 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1>I Consigli della Nonna alcolizzata</h1>
-      <h3>
-        Made with love by{" "}
-        <a
-          href="https://www.instagram.com/solomon.taiwo/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Solomon
-        </a>
-      </h3>
-      {!showNextButton && (
-        <button onClick={handleClick}>Fatti consigliare</button>
-      )}
-      {showNextButton && (
-        <>
-          <p className="phrase">{currentPhrase}</p>
-          <button onClick={handleNextPhrase}>Altro gioco</button>
-        </>
-      )}
+    <div className="container-wrapper">
+      <div className="container">
+        <h1>I Consigli della Nonna alcolizzata</h1>
+        <h3>
+          Made with love by{" "}
+          <a
+            href="https://www.instagram.com/solomon.taiwo/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Solomon
+          </a>
+        </h3>
+        {!showNextButton && (
+          <button onClick={handleClick}>Fatti consigliare</button>
+        )}
+        {showNextButton && (
+          <>
+            <p className="phrase">{currentPhrase}</p>
+            <button onClick={handleNextPhrase}>Altro gioco</button>
+          </>
+        )}
+      </div>
     </div>
   );
 }
